@@ -1,4 +1,4 @@
-name: FinnHub CI
+name: AlphaVantage Release
 
 on:
   push:
