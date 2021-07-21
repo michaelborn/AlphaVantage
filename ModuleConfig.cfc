@@ -80,8 +80,8 @@ component {
 				.asSingleton()
 				.initWith({
 					baseURL : settings.apiURL,
-					headers = {
-						"X-AlphaVantage-Token" : settings.apiKey
+					queryParams : {
+						"apikey" : settings.apiKey
 					}
 				});
 
