@@ -23,7 +23,22 @@ component extends="testbox.system.BaseSpec" {
                 expect( result.isSuccess() ).toBeTrue( "should return successfull status code" );
 
                 expect( isJSON( result.getData() ) ).toBeTrue( "should return JSON" );
+
+                expect( result.json() ).toHaveKey( "MarketCapitalization" );
             } );
+
+            it( "+getCompanyEarnings()", function() {
+                var result = variables.model.getCompanyEarnings( "MSFT" );
+
+                expect( isInstanceOf( result, "hyper.models.HyperResponse" ) ).toBeTrue( "should return hyperResponse object" );
+
+                debug( result.getData() );
+
+                expect( result.isSuccess() ).toBeTrue( "should return successfull status code" );
+
+                expect( isJSON( result.getData() ) ).toBeTrue( "should return JSON" );
+                expect( result.json() ).toHaveKey( "annualEarnings" );
+            });
         } );
     }
 }

@@ -9,6 +9,21 @@ component{
     }
 
     /**
+     * Get company earnings data
+     *
+     * @symbol stock symbol of company to retrieve
+     * 
+     * @url https://www.alphavantage.co/documentation/#earnings
+     */
+    public function getCompanyEarnings( required string symbol ){
+        var queryParams = {
+            "function" : "EARNINGS",
+            "symbol" : arguments.symbol
+        };
+        return AlphaVantageClient.setMethod( "GET" ).withQueryParams( queryParams ).send();
+    }
+
+    /**
      * Get company overview fundamentals
      * @symbol company stock symbol of data to retrieve
      * 
