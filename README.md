@@ -1,22 +1,3 @@
-# ColdBox API Module Template
-
-Use this template to start a new API wrapper in the format of a ColdBox module.
-
-## Getting Started
-
-1. Clone this repo
-2. Replace `alphavantage` with your module slug, i.e. `cfynab`
-3. Replace `AlphaVantage` with your module name, i.e. `cfYNAB`
-4. Replace `michaelborn` with your github user name, i.e. `michaelborn`
-5. Create a new github repository
-6. Configure the following secrets in the github repository:
-   1. `FORGEBOX_TOKEN` - grab this from your [Forgebox profile](https://www.forgebox.io/profile#apitoken)
-   2. `GH_TOKEN` - grab this from your [Github Developer settings](https://github.com/settings/tokens)
-   3. `ALPHAVANTAGE_API_KEY` - Used for github actions tests. `FINNHUB_API_KEY=mySecretKey`
-   4. `ALPHAVANTAGE_API_URL` - Used for github actions tests. `FINNHUB_API_URL=https://sandbox.finnhub.io/api/v1`
-7. Code, test, and push to a github repository to use the github actions build.
-8. Profit. 💰
-
 # AlphaVantage CFML API wrapper
 
 Wraps the [AlphaVantage](https://alphavantage.io) API for easy CFML usage using the [Hyper](https://github.com/elpete/hyper) ColdBox module.
